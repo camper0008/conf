@@ -5,8 +5,8 @@ pcall(require, "luarocks.loader")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
+              require("awful.autofocus")
 local xrandr = require("xrandr")
-require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
 -- Theme handling library
@@ -42,7 +42,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "alduin/theme.lua")
+beautiful.init(string.format("%s/.config/awesome/themes/gruvbox/theme.lua", os.getenv("HOME")))
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"

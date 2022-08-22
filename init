@@ -1,0 +1,4 @@
+#!/bin/sh
+cd ./home/
+cp . ~ -r -l
+cd ..
