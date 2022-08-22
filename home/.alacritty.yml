@@ -1,0 +1,49 @@
+font:
+  normal:
+    family: "Red Hat Mono"
+    style: Medium
+
+  bold:
+    family: "Red Hat Mono"
+    style: Bold
+
+  italic:
+    family: "Red Hat Mono"
+    style: Medium Italic
+
+  bold_italic:
+    family: "Red Hat Mono"
+    style: Bold Italic
+
+  size: 12
+
+window:
+  padding:
+    x: 8
+    y: 8
+  dynamic_title: true
+
+colors:
+  primary:
+    background: '0x282828'
+    foreground: '0xdfbf8e'
+
+  normal:
+    black:   '0x665c54'
+    red:     '0xea6962'
+    green:   '0xa9b665'
+    yellow:  '0xe78a4e'
+    blue:    '0x7daea3'
+    magenta: '0xd3869b'
+    cyan:    '0x89b482'
+    white:   '0xdfbf8e'
+
+  bright:
+    black:   '0x928374'
+    red:     '0xea6962'
+    green:   '0xa9b665'
+    yellow:  '0xe3a84e'
+    blue:    '0x7daea3'
+    magenta: '0xd3869b'
+    cyan:    '0x89b482'
+    white:   '0xdfbf8e'

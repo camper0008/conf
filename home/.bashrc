@@ -1,0 +1,41 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+
+PROMPT_COLOR="\[\033[47m\]\[\033[30m\]"
+CLEAR_COLOR="\[\033[0m\]"
+
+#\[\033[COLORm\]
+PS1=$CLEAR_COLOR'\u '$PROMPT_COLOR'[$(prompt-shortener)]'$CLEAR_COLOR' \$ '
+
+setxkbmap -layout dk
+setxkbmap -option ctrl:nocaps
+
+
+# aliases
+alias pacman="sudo pacman"
+alias docker="sudo docker"
+alias docker-compose="sudo docker-compose"
+
+export PATH="$PATH:/home/pieter/.yarn/bin"
+export PATH="$PATH:/home/pieter/.local/share/gem/ruby/3.0.0/bin"
+export PATH="$PATH:/home/pieter/.cargo/bin"
+export PATH="$PATH:/home/pieter/.config/yarn/global/node_modules/.bin"
+
+export EDITOR="nvim"
+
+# flutter dev
+export PATH="$PATH:/home/pieter/flutter/bin"
+export PATH="$PATH:/opt/android-studio/bin"
+export CHROME_EXECUTABLE="/usr/bin/chromium"
+export ANDROID_HOME="/home/pieter/Android/Sdk"
+export SDKMANAGER_OPTS='--add-modules java.se.ee' 
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions'
+
+alias convpn="sudo openvpn --config /home/pieter/vpn/conf.ovpn"
