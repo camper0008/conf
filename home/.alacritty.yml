@@ -15,7 +15,7 @@ font:
     family: "Red Hat Mono"
     style: Bold Italic
 
-  size: 12
+  size: 10.5
 
 window:
   padding:

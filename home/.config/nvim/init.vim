@@ -1,4 +1,4 @@
-set rnu nu expandtab smartindent autoindent noswapfile splitbelow splitright
+set rnu nu expandtab smartindent autoindent noswapfile splitbelow splitright cursorline cursorcolumn
 syntax on
 set tabstop=4
 set softtabstop=4
@@ -46,6 +46,7 @@ autocmd BufWritePre *.css Neoformat
 autocmd BufWritePre *.scss Neoformat
 autocmd BufWritePre *.html Neoformat
 autocmd BufWritePre *.md Neoformat
+autocmd BufWritePre *.vue Neoformat
 
 " lualine
 lua << END
