@@ -47,6 +47,7 @@ autocmd BufWritePre *.scss Neoformat
 autocmd BufWritePre *.html Neoformat
 autocmd BufWritePre *.md Neoformat
 autocmd BufWritePre *.vue Neoformat
+autocmd BufWritePre *.json Neoformat
 
 " lualine
 lua << END
