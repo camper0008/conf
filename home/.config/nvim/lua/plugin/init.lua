@@ -23,7 +23,9 @@ return require("packer").startup(function(use)
 
     use({ "rust-lang/rust.vim", opt = true, ft = { "rs" } })
     use({ "dart-lang/dart-vim-plugin", opt = true, ft = { "dart" } })
+    use({ "fatih/vim-go", opt = true, run = ":GoUpdateBinaries", ft = { "go" } })
     use("nvim-lualine/lualine.nvim")
+    use({ "lukas-reineke/indent-blankline.nvim", config = 'require("indent_blankline").setup{}' })
     use({
         "sbdchd/neoformat",
         ft = {
@@ -40,7 +42,6 @@ return require("packer").startup(function(use)
             "lua",
         },
     })
-    use({ "fatih/vim-go", opt = true, run = ":GoUpdateBinaries", ft = { "go" } })
     use("ellisonleao/gruvbox.nvim")
 
     if packer_bootstrap then
