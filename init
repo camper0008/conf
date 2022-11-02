@@ -1,4 +1,4 @@
 #!/bin/sh
 cd ./home/
-cp . ~ -r -l
+cp . ~ -r -l -f -i
 cd ..
