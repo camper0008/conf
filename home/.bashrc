@@ -39,3 +39,9 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions'
 
 alias convpn="sudo openvpn --config $HOME/vpn/conf.ovpn"
+alias ssh="kitty +kitten ssh"
+
+# deno based gigachad skrevet i krabbe sproget 🦀🚀
+export DENO_INSTALL="/home/pieter/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+. "$HOME/.cargo/env"
