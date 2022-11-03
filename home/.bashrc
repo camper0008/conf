@@ -7,11 +7,11 @@
 
 alias ls='ls --color=auto'
 
-PROMPT_COLOR="\[\033[47m\]\[\033[30m\]"
+PROMPT_COLOR="\[\033[1m\[\033[44m\]\[\033[30m\]"
 CLEAR_COLOR="\[\033[0m\]"
 
 #\[\033[COLORm\]
-PS1=$CLEAR_COLOR'\u '$PROMPT_COLOR'[$(prompt-shortener)]'$CLEAR_COLOR' \$ '
+PS1=$CLEAR_COLOR'\u '$PROMPT_COLOR' $(prompt-shortener) '$CLEAR_COLOR' \$ '
 
 setxkbmap -layout dk
 setxkbmap -option ctrl:nocaps
