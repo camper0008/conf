@@ -21,8 +21,8 @@ vim.cmd([[
 return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
 
-    use({ "rust-lang/rust.vim", opt = true, ft = { "rs" } })
-    use({ "dart-lang/dart-vim-plugin", opt = true, ft = { "dart" } })
+    use({ "rust-lang/rust.vim" })
+    use({ "dart-lang/dart-vim-plugin" })
     use({ "fatih/vim-go", opt = true, run = ":GoUpdateBinaries", ft = { "go" } })
     use("nvim-lualine/lualine.nvim")
     use({ "lukas-reineke/indent-blankline.nvim", config = 'require("indent_blankline").setup{}' })
@@ -43,6 +43,19 @@ return require("packer").startup(function(use)
         },
     })
     use("ellisonleao/gruvbox.nvim")
+    use({
+        "akinsho/toggleterm.nvim",
+        tag = "2.3.0",
+        config = function()
+            require("toggleterm").setup({
+                open_mapping = [[<C-k>]],
+                direction = "float",
+                float_opts = {
+                    border = "curved", -- 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+                },
+            })
+        end,
+    })
 
     if packer_bootstrap then
         require("packer").sync()
