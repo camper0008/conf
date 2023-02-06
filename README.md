@@ -37,3 +37,5 @@ Applying to lightdm: [Lightdm Greeter Settings](https://archlinux.org/packages/c
 - spotify-launcher
 
 - discord
+
+- gnome-screenshot => screenshot util - (ctrl +)* shift + print screen (* to copy to clipboard instead of save in )
