@@ -12,7 +12,7 @@ Desktop/Applications: [Fausto-Korpsvart/Gruvbox-GTK-Theme](https://github.com/Fa
 
 Applying to lightdm: [Lightdm Greeter Settings](https://archlinux.org/packages/community/any/lightdm-gtk-greeter-settings/) 
 
-## Helpful programs
+## Helpful packages
 
 - neovim => editor of choice
 
@@ -24,9 +24,9 @@ Applying to lightdm: [Lightdm Greeter Settings](https://archlinux.org/packages/c
 
 - keepassxc => password manager
 
-- syncthing => syncing passwords between phone and desktop
+- syncthing => syncing passwords between devices
 
-- openssh => ssh client
+- openssh => ssh client/server
 
 - vlc => video
 
@@ -38,4 +38,4 @@ Applying to lightdm: [Lightdm Greeter Settings](https://archlinux.org/packages/c
 
 - discord
 
-- gnome-screenshot => screenshot util - (ctrl +)* shift + print screen (* to copy to clipboard instead of save in )
+- gnome-screenshot => screenshot util - `(ctrl +)* shift + print screen` (* to copy to clipboard instead of save in home dir)
