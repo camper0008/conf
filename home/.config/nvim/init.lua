@@ -1,5 +1,5 @@
 -- modified from kickstart.nvim
--- remember to run :checkhealth & :PackerInstall
+-- remember to run :checkhealth & :PackerInstall / :PackerSync
 local vim = vim -- avoids "undefined global nvim" errors everywhere :-/
 
 -- Install packer
