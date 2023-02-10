@@ -16,6 +16,8 @@ Applying to lightdm: [Lightdm Greeter Settings](https://archlinux.org/packages/c
 
 - neovim => editor of choice
 
+- alacritty => terminal of choice
+
 - firefox => browser
   - ublock origin
   - keepassxc browser
@@ -38,4 +40,10 @@ Applying to lightdm: [Lightdm Greeter Settings](https://archlinux.org/packages/c
 
 - discord
 
-- gnome-screenshot => screenshot util - `(ctrl +)* shift + print screen` (* to copy to clipboard instead of save in home dir)
+- gnome-screenshot => screenshot util - `(ctrl +)* shift + print screen` (\* to copy to clipboard instead of save in home dir)
+
+## Docs
+
+- [Audio](https://github.com/camper0008/arch/blob/main/docs/audio.md)
+
+- [WPA2 Enterprise Wifi](https://github.com/camper0008/arch/blob/main/docs/wpa2-enterprise-wifi.md)
