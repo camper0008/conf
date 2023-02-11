@@ -112,7 +112,6 @@ local set_args = function(opts)
 end
 
 set_args({
-    rnu = true,
     nu = true,
     expandtab = true,
     smartindent = true,
@@ -304,7 +303,7 @@ local on_attach = function(_, bufnr)
         vim.lsp.buf.format()
     end, { desc = "Format current buffer with LSP" })
 
-    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 end
 
 -- Enable the following language servers
@@ -367,7 +366,7 @@ cmp.setup({
         end,
     },
     mapping = cmp.mapping.preset.insert({
-        ["<C-d>"] = cmp.mapping.scroll_docs( -4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<CR>"] = cmp.mapping.confirm({
