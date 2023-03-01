@@ -14,7 +14,8 @@ PS1=$CLEAR_COLOR'\u '$PROMPT_COLOR' $(prompt-shortener) '$CLEAR_COLOR' \$ '
 alias pacman="sudo pacman"
 alias shutdown="pacman -Syu && shutdown"
 alias docker="sudo docker"
-alias docker-compose="sudo docker-compose"
+alias ls="exa"
 
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.yarn/bin"
 export EDITOR="nvim"
