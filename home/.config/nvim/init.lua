@@ -211,7 +211,7 @@ vim.keymap.set("n", "<leader>sg", require("telescope.builtin").live_grep, { desc
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { "c", "python", "rust", "typescript", "vimdoc", "vim" },
+    ensure_installed = { "c", "python", "rust", "typescript", "vimdoc", "vim", "elixir" },
     highlight = { enable = true },
     indent = { enable = true, disable = { "python" } },
     incremental_selection = {
@@ -304,7 +304,7 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 
 -- lspconfig
-local lsp_servers = { "rust_analyzer" };
+local lsp_servers = { "rust_analyzer", "clangd", "denols", "dartls", "ruff", "pyright" };
 
 local lspconfig = require("lspconfig");
 for _, server in ipairs(lsp_servers) do
@@ -313,6 +313,10 @@ for _, server in ipairs(lsp_servers) do
 	capabilities = capabilities,
     });
 end
+
+lspconfig["elixirls"].setup({
+    cmd = { "/home/pieter/.config/elixir_ls/launch.sh" },
+});
 
 cmp.setup({
     snippet = {

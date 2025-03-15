@@ -1,0 +1,3 @@
+#!/bin/sh
+source $HOME/.bashrc
+PS1="(tmp) $PS1"
