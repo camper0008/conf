@@ -140,6 +140,11 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+vim.keymap.set("n", "L", function() vim.diagnostic.open_float() end)
+
+vim.keymap.set("v", ">", "'>gv'", { expr = true, silent = true })
+vim.keymap.set("v", "<", "'<gv'", { expr = true, silent = true })
+
 -- [[ Highlight on yank ]]
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -211,7 +216,7 @@ vim.keymap.set("n", "<leader>sg", require("telescope.builtin").live_grep, { desc
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { "c", "python", "rust", "typescript", "vimdoc", "vim", "elixir" },
+    ensure_installed = { "c", "python", "rust", "typescript", "vimdoc", "vim", "elixir", "astro" },
     highlight = { enable = true },
     indent = { enable = true, disable = { "python" } },
     incremental_selection = {
@@ -304,19 +309,23 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 
 -- lspconfig
-local lsp_servers = { "rust_analyzer", "clangd", "denols", "dartls", "ruff", "pyright" };
+local lsp_servers = { "rust_analyzer", "clangd", "denols", "dartls", "astro", "ruff", "pyright", "expert" };
 
 local lspconfig = require("lspconfig");
 for _, server in ipairs(lsp_servers) do
-    lspconfig[server].setup({
+    vim.lsp.config(server ,{
 	on_attach = on_attach,
 	capabilities = capabilities,
     });
+
+    vim.lsp.enable(server);
 end
 
-lspconfig["elixirls"].setup({
-    cmd = { "/home/pieter/.config/elixir_ls/launch.sh" },
-});
+vim.lsp.config("denols", {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "javascript", "typescript", "html", "css", "json", "jsonc", "markdown" }
+})
 
 cmp.setup({
     snippet = {
